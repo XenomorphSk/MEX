@@ -1,0 +1,11 @@
+# Quebras de linha LF em todo o repositório, inclusive em clones no Windows.
+* text=auto eol=lf
+
+# Fixtures forenses: bytes exatos. Seus SHA-256 são conferidos contra o
+# oráculo gerado pelo sha256sum; qualquer conversão invalidaria os testes.
+tests/fixtures/** -text
+
+# Binários.
+*.png  binary
+*.ico  binary
+*.icns binary

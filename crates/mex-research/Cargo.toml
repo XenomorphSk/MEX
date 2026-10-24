@@ -1,0 +1,19 @@
+[package]
+name = "mex-research"
+description = "Framework de pesquisa do BlackBit MEX: catálogo de laboratório, maturidade de métodos e matriz de compatibilidade."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+mex-core.workspace = true
+serde.workspace = true
+uuid.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

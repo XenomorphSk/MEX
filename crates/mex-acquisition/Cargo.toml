@@ -1,0 +1,25 @@
+[package]
+name = "mex-acquisition"
+description = "Motor de aquisição do BlackBit MEX: orquestração de jobs e importador local de evidências."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+mex-core.workspace = true
+mex-evidence.workspace = true
+mex-storage.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tempfile = "3"
+sqlx.workspace = true

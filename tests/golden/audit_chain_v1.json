@@ -1,0 +1,35 @@
+[
+  {
+    "seq": 0,
+    "id": "00000000-0000-4000-8000-000000000001",
+    "case_id": "11111111-1111-4111-8111-111111111111",
+    "operator_id": "22222222-2222-4222-8222-222222222222",
+    "kind": "case-created",
+    "detail": "Caso IP 0001/2025 aberto",
+    "at": "2025-01-01T12:00:00.000000Z",
+    "prev_hash": null,
+    "entry_hash": "da9203dec4d54b1fa67da6d20e9c6ef86340f51ccdab30c5ec404bcf1b593780"
+  },
+  {
+    "seq": 1,
+    "id": "00000000-0000-4000-8000-000000000002",
+    "case_id": "11111111-1111-4111-8111-111111111111",
+    "operator_id": "22222222-2222-4222-8222-222222222222",
+    "kind": "authorization-recorded",
+    "detail": "Mandado nº 123/2025 registrado",
+    "at": "2025-01-01T12:05:00.250000Z",
+    "prev_hash": "da9203dec4d54b1fa67da6d20e9c6ef86340f51ccdab30c5ec404bcf1b593780",
+    "entry_hash": "ddb8ec856f9b2357a46968f472a3537f51dfb913a30b6f1fb8b300085125042f"
+  },
+  {
+    "seq": 2,
+    "id": "00000000-0000-4000-8000-000000000003",
+    "case_id": null,
+    "operator_id": null,
+    "kind": "error",
+    "detail": "Falha simulada",
+    "at": "2025-01-01T12:06:00.000001Z",
+    "prev_hash": "ddb8ec856f9b2357a46968f472a3537f51dfb913a30b6f1fb8b300085125042f",
+    "entry_hash": "c59f71624840ee854355aa139c2d52e3502528ca866ed1098b0ed14fb7d2d032"
+  }
+]

@@ -1,0 +1,6 @@
+/target
+# Cargo.lock é versionado: o MEX é uma aplicação e builds periciais
+# precisam ser reprodutíveis (versões exatas de dependências).
+*.db
+*.db-wal
+*.db-shm

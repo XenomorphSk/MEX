@@ -1,0 +1,58 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/mex-core",
+    "crates/mex-storage",
+    "crates/mex-research",
+    "crates/mex-evidence",
+    "crates/mex-acquisition",
+    "crates/mex-reporting",
+    "crates/mex-app",
+    "apps/desktop/src-tauri",
+]
+
+# Crates planejados para milestones seguintes (ainda não implementados):
+#   crates/mex-devices       (M3), crates/mex-android     (M3),
+#   crates/mex-ios           (futuro)
+# Serão adicionados a `members` somente quando tiverem código real e
+# compilável, para não exibir funcionalidades inexistentes.
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+license = "Proprietary"
+authors = ["BlackBit Engineering"]
+
+[workspace.dependencies]
+mex-core = { path = "crates/mex-core" }
+mex-research = { path = "crates/mex-research" }
+mex-storage = { path = "crates/mex-storage" }
+mex-evidence = { path = "crates/mex-evidence" }
+mex-acquisition = { path = "crates/mex-acquisition" }
+mex-reporting = { path = "crates/mex-reporting" }
+mex-app = { path = "crates/mex-app" }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+sha2 = "0.10"
+hex = "0.4"
+uuid = { version = "1", features = ["v4", "serde"] }
+time = { version = "0.3", features = ["serde", "formatting", "parsing", "macros"] }
+async-trait = "0.1"
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "sync", "time", "fs", "io-util"] }
+tracing = "0.1"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "migrate", "macros"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+
+# Hashing em testes de arquivos grandes: otimiza sha2 mesmo no perfil dev.
+[profile.dev.package.sha2]
+opt-level = 3
