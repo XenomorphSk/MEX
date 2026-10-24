@@ -4,3 +4,7 @@
 *.db
 *.db-wal
 *.db-shm
+
+# Fixtures de teste são versionadas integralmente, inclusive arquivos .db
+# (bytes exatos conferidos contra tests/fixtures/*.sha256).
+!tests/fixtures/**
